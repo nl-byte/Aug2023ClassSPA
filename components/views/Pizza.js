@@ -9,5 +9,14 @@ export default state => html` <section id="pizza">
     <th>Toppings</th>
     <th>Customer</th>
   </tr>
+${state.pizzas
+  .map(pizza => {
+    return `<tr><td>${pizza.crust}</td><td>${pizza.cheese}</td><td>${
+      pizza.sauce
+    }</td><td>${pizza.toppings.join(" & ")}</td><td>${pizza.customer}</td></tr>`;
+  })
+  .join("")};
+
 </table>
-</section>`;
+</section>
+`;
