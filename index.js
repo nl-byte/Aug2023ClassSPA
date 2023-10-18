@@ -4,6 +4,7 @@ import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
 
+
 console.log(store);
 const router = new Navigo("/");
 console.log("test");
@@ -74,6 +75,7 @@ function afterRender(state) {
 
 router.hooks({
   before: (done, params) => {
+
     const view =
       params && params.data && params.data.view
         ? capitalize(params.data.view)
